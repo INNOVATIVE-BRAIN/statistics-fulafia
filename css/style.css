@@ -68,7 +68,7 @@ a:hover {
 }
 
 .site-navbar-wrap {
-  position: absolute;
+  /* position: absolute; */
   z-index: 99;
   width: 100%;
   left: 0;
