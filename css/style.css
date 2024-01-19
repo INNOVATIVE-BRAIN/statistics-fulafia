@@ -74,9 +74,9 @@ a:hover {
   left: 0;
 }
 
-.site-navbar-wrap * {
+/* .site-navbar-wrap * {
   z-index: 99;
-}
+} */
 .site-navbar-wrap a {
   color: #fff;
 }
@@ -110,7 +110,7 @@ a:hover {
   padding-top: 15px;
   padding-right: 15px;
   padding-bottom: 0px;
-  padding-left: 0px;
+  padding-left: 40px;
 }
 
 .site-logo .white-logo {
@@ -157,7 +157,9 @@ a:hover {
   .site-navigation {
     background-color: transparent;
     border-top-left-radius: none !important;
-    border-left: 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.47);
+    border-radius: unset;
+    color: #fff;
   }
 }
 
