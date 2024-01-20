@@ -39,10 +39,10 @@
       });
     }
 
-    var carouselSlider = document.querySelectorAll(".carousel-testimony");
+    var carouselSlider = document.querySelectorAll(".carousel-staff");
     if (carouselSlider.length > 0) {
-      var testimonySlider = tns({
-        container: ".carousel-testimony",
+      var staffSlider = tns({
+        container: ".carousel-staff",
         items: 1,
         mode: "carousel",
         autoplay: true,
