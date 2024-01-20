@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
 
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?j">
 
 
 
@@ -1008,7 +1008,40 @@
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initial values
+            let initialCoverWidth = 750;
+            //initialCoverWidth = $('video').width();
+            let fontSize = 12;
+            let topPosition = 15;
 
+            // Elements
+            let textOverlays = $('.lab_video_text_overlay');
+
+            resizeText();
+            $(window).on('resize', resizeText);
+
+            function resizeText() {
+                let windowWidth = $(window).width();
+                let aspectRatio = initialCoverWidth / windowWidth;
+
+                textOverlays.each(function () {
+                    let textOverlay = $(this);
+                    let newFontSize = Math.round(fontSize / aspectRatio);
+                    let newTopPosition = Math.round(topPosition / aspectRatio);
+
+                    let textOverlayCSS = {
+                        fontSize: newFontSize + 'px',
+                        top: newTopPosition + '%',
+                    };
+
+                    textOverlay.css(textOverlayCSS);
+                });
+            }
+        });
+
+    </script>
 </body>
 
 </html>
